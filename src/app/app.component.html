@@ -1,0 +1,48 @@
+<div class="containerf-fluid">
+  <header class="header">
+    <div class="row">
+      <div class="col-lg-2"><img src="assets/logo.png" style="width: 90px;padding-top: 10px; margin-left: 5px;"></div>
+      <div class="col-lg-10"><img src="assets/header1.png" class="headerImg" ></div>
+    </div>
+  </header>
+
+  <div class="mainDiv">
+    <button class="btn btn-primary strBtn" (click)="showBar()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" >Start</button>
+  </div>
+
+  <div class="alert" *ngIf="alertinfo">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <div class="iconArrow">
+      &#x2714;
+    </div>
+    Success
+    Migration applied successfully
+  </div>
+ 
+  <button class="btn btn-primary imgShow" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" >&#11205;</button>
+  <div class="offcanvas offcanvas-bottom" *ngIf="showProgress" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-body small">
+      <footer *ngIf="showProgress" class="footerDiv" >
+        <div class="row" style="border: 1px solid #CCC;">
+          <div class="boosterIconLeft"> <img src="assets/booster.png" >
+  
+          </div>
+          
+          <div class="arrow-right"></div>
+          <div class="boosterIconRight"><span
+              style="float: left;margin-bottom: 5px; margin-top: 5px; font-size: 13px;">Migration Data to Selected
+              Environment</span> <span style="float: right; width: 40px;">{{bar+"%"}}</span>
+            <mat-progress-bar mode="determinate" [value]="bar"></mat-progress-bar>
+          </div>
+        </div>
+  
+      </footer>
+    </div>
+  </div>
+  
+  <div class="footerCopy" >
+    <div class="col-lg-2"><img src="assets/logo.png" style="width: 90px; float: left;"></div>
+    <div class="col-lg-10"><span style="text-align: center; font-size: 12px;">copyrights &#169;2000-2023 AmpleLogic | All Rights Reserved</span></div>
+  </div>
+  
+</div>
