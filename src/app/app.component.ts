@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,7 +11,7 @@ export class AppComponent {
   showProgress:boolean=true;
   alertinfo:boolean=false;
   
-  constructor(private dialog:MatDialog){}
+  constructor(){}
   showBar(){
 this.showProgress=true;
 setInterval(()=>{
