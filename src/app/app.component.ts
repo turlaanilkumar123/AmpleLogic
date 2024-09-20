@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AmpleLogic';
+  title = 'AmpleLogic Company';
   startbar=0;
   bar=0;
   showProgress:boolean=true;
