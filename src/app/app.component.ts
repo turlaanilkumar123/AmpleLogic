@@ -6,20 +6,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AmpleLogic Company';
-  startbar = 0;
-  bar = 0;
-  showProgress: boolean = true;
-  alertinfo: boolean = false;
-  constructor() { }
-  showBar() {
-    this.showProgress = true;
-    setInterval(() => {
-      if (this.bar < 100) {
-        this.bar = this.bar + 1;
-      }
-      if (this.bar >= 100) {
-        this.alertinfo = true;
-      }
-    }, 100)
-  }
+ 
 }
